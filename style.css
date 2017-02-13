@@ -1,0 +1,362 @@
+/****************** BODY & HTML ******************/
+ html, body{
+	 margin: 0;
+	 padding: 0;
+	 height: 100%;
+	 font-family: Playfair Display;
+	 font-size: 20px;
+	 color: #000000;
+	 background-color: pink;
+ }
+/****************** WRAPPER ******************/
+ #wrapper{
+	 width: 100%;
+	 height: 100%;
+	 top: 0;
+	 left: 0;
+	 position: absolute;
+	 background-image: url(images/temple.jpg);
+	 background-repeat: no-repeat;
+	 background-size: cover;
+ }
+
+/****************** HEADER ******************/
+ 
+ #header{
+	 font-family: sofia;
+	 font-size: 10px;
+	 color: white;
+	 padding: 5px;
+	 margin: 0;
+	 width: 100px;
+	 height: 20px;
+	 position: fixed;
+	 top: 0;
+	 right: 0;
+
+ }
+ 
+ .marginless{
+	 margin: 0;
+	 display: inline;
+}
+
+/****************** FACE ******************/
+#face_back{
+	width: 415px;
+	height: 235px;
+	position: fixed;
+	padding: 20px;
+	margin-top: 150px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	border: 4px double white;
+	left: 0%;
+	right: 0%;
+}
+
+#face{
+	opacity: 0.8;
+	background-color: white;
+	padding: 20px;
+	margin-top: 160px;
+	margin-left: auto;
+	margin-right: auto;
+	position: fixed;
+	text-align: center;
+	left: 0%;
+	right: 0%;
+	display: block;
+	width: 400px;
+	height: 220px;
+}
+
+ 
+#title {
+	font-family: Playfair Display;
+	padding: 5px;
+	font-size: 25px;
+	color: black;
+	margin-bottom: 10px;
+	display: block;
+	width: 100%;
+	height: 99px;
+}
+
+#inner_title{
+	position: relative;
+	top: 30px;
+	border-bottom: 3px white solid;
+	border-color: grey;
+}
+
+#subtitle{
+	font-family: Playfair Display;
+	margin: auto;
+	display: block;
+	width: 100%;
+	height: 99px;
+}
+
+#arrow{
+	margin-left: auto;
+	margin-right: auto;
+	left: 0%;
+	right: 0%;
+	position: fixed;
+	bottom: -45px;
+	border-radius: 100px;
+	width: 90px;
+	height: 90px;
+	opacity: 0.6;
+	background-color: white;	
+	transition: 2s;
+}
+
+#arrowimg{
+	float: left;
+	width: 30px;
+	height: 30px;
+	margin-top: 30px;
+	margin-left: 30px;
+}
+
+#arrow:hover{
+	transform: translateY(-30px);
+}
+
+#player{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 70px;
+	opacity: 0.8;
+}
+
+
+ 
+/****************** CONTENT ******************/
+
+#content{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	bottom: -1100px;
+	padding: 0;
+	background-color: #FDFFFC;
+	width: 100%;
+	height: 1100px;
+}
+
+/****************** NAVIGATION ******************/
+#nav{
+	border: 4px black double;
+	float: left;
+	display: inline-block;
+	margin: 10px;
+	margin-left: -50px;
+	width: 15%;
+	height: 300px;
+	background-image: url(images/flowers.jpg);
+	opacity: 0.8;
+	transition: 2s;
+}
+
+#nav:hover{
+	margin-left: -5px;
+}
+
+#navlist{
+	padding: 2px;
+	list-style-type: none;
+}
+
+li{
+	font-family: sofia;
+	text-align: center;
+	font-size: 30px;
+	margin: 0;
+	padding: 0;
+}
+
+li:hover{
+	opacity: 0.9;
+	cursor: pointer;
+	background-color: pink;
+}
+
+
+
+/****************** ABOUT ******************/
+#mid_section{
+	overflow: auto;
+	border: 5px black double;
+	margin: 10px;
+	display: inline-block;
+	width: 62%;
+	height: 97%;
+	opacity: 0.8;
+}
+
+#about{
+	margin: 0;
+	padding: 10px;
+}
+
+#left_col{
+	overflow: auto;
+	padding: 6px;
+	display: inline-block;
+	margin: 0;
+	width: 47%;
+	float: left;
+	height: 920px;
+}
+
+.defaultdir{
+	direction: ltr;
+}
+
+#right_col{
+	direction: rtl;
+	overflow: auto;
+	padding: 6px;
+	margin: 0;
+	height: 920px;
+	float: right;
+	width: 47%;
+}
+
+/****************** CONTACT ******************/
+#contact{
+	margin: 0;
+	padding: 10px;
+	display: none;
+}
+
+#contact_section{
+	width: 99%;
+	margin: 5px;
+	height: 920px;
+}
+
+/****************** MEDIA ******************/
+#media{
+	matgin: 0;
+	padding: 10px;
+	display: none;
+	text-align: center;
+}
+
+#waves{
+	transition: 2s;
+}
+#waves:hover{
+	cursor: pointer;
+	transform: scale(1.05);
+}
+
+/****************** PROFILE ******************/
+#profile{
+	font-size: 13px;
+	border: 5px black double;
+	float: right;
+	margin: 10px;
+	display: inline-block;
+	width: 15%;
+	height: auto;
+	opacity: 0.8;
+	background-color:; 
+}
+
+#profile_pic{
+	width: 95%;
+	height: auto;
+	margin: 5px;
+}
+
+/****************** SECRET ******************/
+#secrets{
+	height: 97%;
+	overflow: auto;
+	padding: 10px;
+	display: none;
+}
+
+#hidden{
+	display: none;
+	text-align: center;
+	width: 100%;
+	height: 700px;
+}
+
+#secret_form{
+	text-align:center;
+	margin-top: 20px;
+	margin-bottom: auto;
+	width: 100%%;
+	height: 200px;
+}
+
+input{
+	height: 40px;
+	width: 50%;
+}
+
+/****************** KEYFRAMES ******************/
+
+
+
+
+/****************** KEYFRAMES ******************/
+
+@keyframes fadeFromNone{
+	0%{opacity: 0;}
+	100%{opacity: 1;}
+}
+
+@keyframes fadeToNone{
+	0%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+/****************** OVERIDES ******************/
+/* Some functions to overide some values in our
+ html code and site*/
+@font-face{
+	font-family: alexBrush;
+	src: url(fonts/alex-brush/AlexBrush-Regular.ttf)
+}
+
+@font-face{
+	font-family: caviarDreams;
+	src: url(fonts/Caviar-Dreams/CaviarDreams.ttf)
+}
+
+@font-face{
+	font-family: sofia;
+	src: url(fonts/sofia/Sofia-Regular.otf)
+}
+
+@font-face{
+	font-family: quicksand;
+	src: url(fonts/quicksand/Quicksand-BlodItalic.otf)
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: pink;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	border-radius: 5px;
+    background: grey; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}

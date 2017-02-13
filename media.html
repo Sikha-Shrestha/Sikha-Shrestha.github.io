@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>SS Photography</title>
+	<link rel="stylesheet" type="text/css" href="mediaStyle.css">
+	<script>
+	
+		function btn(){
+			document.getElementById("line").style.animation ="unSlide 2s linear forwards";
+			document.getElementById("title").style.animation ="unPop 2s linear forwards";
+			document.getElementById("playbtn").style.animation ="fadeOut 1s linear forwards";
+			
+			
+			setTimeout(function() {
+					var x = document.getElementsByClassName("trueContent");
+					var a = document.getElementsByClassName("trueContenta");
+					document.getElementById("mid").style.display ="none";
+					for (var i = 0; i < x.length; i++){
+						x[i].style.display ="block";
+					}
+					for (var i = 0; i < a.length; i++){
+						a[i].style.display ="inline-block";
+					}
+			}, 2000);
+		} 
+		
+		function imgbtn(){
+			document.getElementById("img3").style.animation ="fadeOut 2s linear forwards";
+			
+			setTimeout(function() {
+				document.getElementById("img3").style.display="none";
+				document.getElementById("img2").style.animation ="fadeIn 2s linear forwards";
+				document.getElementById("img2").style.display ="block";
+			},  2000);
+		}
+	</script>
+</head>
+<body>
+	<div id="wrapper">
+		<div id="mid">
+			<h1 id="title"><b>Sikha S. Photography</b></h1>
+			<div id="line"></div>
+			<div id="playbtn">
+				<a href="#" onclick="btn();return false;"><img id="arrow" src="images/downarrow.png"></img></a>
+			</div>
+		</div>
+		<div id="header" class="trueContent">
+			<h1 style="margin: 0;">Sikha S. Photography</h1><br><i>by Sikha Shrestha</i> <img id="logo" src="images/photograph.png"></img>
+			<div id="socials">
+				<img class="social" src="images/icons/social_media/png/instagram.png"></img> &nbsp
+				<img class="social" src="images/icons/social_media/png/facebook.png"></img> &nbsp
+				<img class="social" src="images/icons/social_media/png/twitter.png"></img> &nbsp
+			</div>
+		</div>
+		<div id="info" class="trueContenta">
+			<h2 style="text-align: center;">Photo Information</h2>
+			<p>Location: Cribbs Causeway, Bristol</p>
+			<p>Camera: CANON</p>
+		</div>
+		<div id="images" class="trueContenta">
+			<img id="img3" class="image" src="images/img3.JPG"></img>
+			<h2 style="background: red;">!PAGE IS CURRENTLY UNDER CONSTRUCTION!</h2>
+			<img id="img2" class="image" src="images/IMG2.JPG"></img>
+		</div>
+		<div id="selections" class="trueContenta">
+			<h2>Select Image</h2>
+			<a href="nextImg()" onclick="imgbtn(); return false;">IMAGE 2</a>
+		</div>
+		<div id="footer"class="trueContent">
+			<audio id="player" controls autoplay>
+				<source src="youAgain.mp3" type="audio/mp3">
+			</audio>
+		</div>
+	</div>
+</body>
+</html>

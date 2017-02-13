@@ -1,0 +1,304 @@
+	<!DOCTYPE html>
+
+<html>
+	<head>
+		<!---------- META DATA ----------
+		*As if this website is going to 
+		need it. However it may be good 
+		practice(?)
+		--------------------------------->
+		<meta charset="UTF-8">
+		<meta name="description" content="An example of using a Girlfriend as material for website practice.">
+		<meta name="author" content="Erlo Tayamen">
+		<!---------- VIEWPORT ----------
+		*It helps with making our website 
+		look good and readable in most 
+		devices. Hopefully. 
+		-------------------------------->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<title>Sikha Shrestha</title>
+		<link rel="image_src" href="ss1.jpg">
+		<link rel="stylesheet" type="text/css"  href="style.css">
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<!---------- SCRIPTS ----------
+		---------->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function(){
+		<!-------- EASE SCROLL ------->
+		  $("a").on('click', function(event) {
+			if (this.hash !== "") {
+			  event.preventDefault();
+			  var hash = this.hash;
+			  
+			  $('html, body').animate({
+				scrollTop: $(hash).offset().top
+			  }, 800, function(){
+			  
+				window.location.hash = hash;
+			  });
+			}
+		   });
+		});
+		<!------- MIDDLE SECTION PAGE -------->
+		
+		function contactbtn(){
+			document.getElementById("about").style.animation= "fadeToNone 1s linear forwards";
+			document.getElementById("media").style.animation= "fadeToNone 1s linear forwards";
+			document.getElementById("secrets").style.animation= "fadeToNone 1s linear forwards";
+			
+			setTimeout(function(){
+				document.getElementById("about").style.display= "none";
+				document.getElementById("media").style.display= "none";
+				document.getElementById("secrets").style.display= "none";
+				document.getElementById("contact").style.display= "block";
+				document.getElementById("contact").style.animation= "fadeFromNone 2s linear forwards";
+			}, 1000);
+		}
+		
+		function aboutbtn(){
+			document.getElementById("contact").style.animation= "fadeToNone 1s linear forwards";
+			document.getElementById("media").style.animation= "fadeToNone 1s linear forwards";
+			document.getElementById("secrets").style.animation= "fadeToNone 1s linear forwards";
+			
+			setTimeout(function(){
+				document.getElementById("contact").style.display= "none";
+				document.getElementById("media").style.display= "none";
+				document.getElementById("secrets").style.display= "none";
+				document.getElementById("about").style.display= "block";
+				document.getElementById("about").style.animation= "fadeFromNone 2s linear forwards";
+			}, 1000);
+			
+		}
+		
+		function mediabtn(){
+			document.getElementById("contact").style.animation= "fadeToNone 1s linear forwards";
+			document.getElementById("about").style.animation= "fadeToNone 1s linear forwards";
+			document.getElementById("secrets").style.animation= "fadeToNone 1s linear forwards";
+			
+			setTimeout(function(){
+				document.getElementById("contact").style.display= "none";
+				document.getElementById("about").style.display= "none";
+				document.getElementById("secrets").style.display= "none";
+				document.getElementById("media").style.display= "block";
+				document.getElementById("media").style.animation= "fadeFromNone 2s linear forwards";
+			}, 1000);
+		}
+		
+		function secretsbtn(){
+			document.getElementById("contact").style.animation= "fadeToNone 1s linear forwards";
+			document.getElementById("about").style.animation= "fadeToNone 1s linear forwards";
+			document.getElementById("media").style.animation= "fadeToNone 1s linear forwards";
+			
+			setTimeout(function(){
+				document.getElementById("contact").style.display= "none";
+				document.getElementById("about").style.display= "none";
+				document.getElementById("media").style.display= "none";
+				document.getElementById("secrets").style.display= "block";
+				document.getElementById("secrets").style.animation= "fadeFromNone 2s linear forwards";
+			}, 1000);
+		}
+	
+		function readAnswer(){
+			var x = document.forms["myForm"]["password"].value;
+			if (x == "isn't she lovely" || x == "isn't she sikha shrestha"){
+				document.getElementById("hidden").style.display ="block";
+				document.getElementById("hidden").style.animation="fadeFromNone 2s linear forwards";
+				window.location.href='#hidden';
+				return false;
+			}
+			else{
+				document.getElementById("validation").style.display ="block";
+				return false;
+			}
+		}
+		
+		</script>
+	</head>
+	<body>
+		<!---------- WRAPPER -----------
+		*The main wrapper. Just to make 
+		things clean. Ya know what I 
+		mean? 
+		- OG wRapper
+		------------------------------->
+		<div id="wrapper">
+			<!---------- HEADER ----------
+			*A small header to contain
+			mostly relevant
+			---------->
+			<div id="header">
+				<h2 class="marginless">Sikha Shrestha</h2>
+			</div>
+			<!---------- FACE -----------
+			*The large background or in
+			this case, THE FACE. Wow.
+			---------->
+			<audio id="player" controls>
+				<source src="ohhyuk.mp3" type="audio/mp3">
+			</audio>
+			
+			<div id="face_back"></div>
+			<div id="face">
+				<div id="title">
+					<h1 id="inner_title" class="marginless">Sikha Shrestha</h1>
+				</div>
+				<div id="subtitle"> 
+					<p style=" font-size: 13px;">“At times the world may seem an unfriendly and sinister place, but believe that there is much more good in it than bad. All you have to do is look hard enough. and what might seem to be a series of unfortunate events may in fact be the first steps of a journey.”</p>
+					<p style=" font-size: 12px;">- Lemony Snicket, The Miserable Mill</p>
+				</div>
+			</div>
+			<a href="#content"><div id="arrow">
+				<img id ="arrowimg" src="images/arrow.png"></img>
+			</div></a>
+			<!---------- CONTENT -----------
+			*Main contents page, with the 
+			navigation and all.
+			---------->
+			<div id="content">
+				<div id="nav">
+					<ul id="navlist">
+						<li onclick="aboutbtn()">About</li>
+						<li onclick="contactbtn()">Contact</li>
+						<li onclick="mediabtn()">Media</li>
+						<li onclick="secretsbtn()">Secret</li>
+						<a style="text-decoration: none; color: black;" href="disclaimers.html"><li>Other</li></a>
+					</ul>
+				</div>
+				
+				<!---------- ABOUT ----------->
+				<div id="mid_section">
+					<div id="about">
+						<div id=""><h1 style=" font-size: 45px;text-align: center; border-bottom: 3px grey solid; font-family: quicksand;">~ ABOUT ~</h1></div>
+						<div id="left_col">
+							<h3><i>An Introduction</i></h3>
+							<img style="margin-left: 27%; margin-right: auto; width: 40%; border: 3px black solid" src="https://68.media.tumblr.com/98f6a066d040ebf7b69ad7c3ae27a1c9/tumblr_nq833p9J001r630xzo1_500.jpg"></img>
+							<p><b>Art</b>. Art lies extremely deep within Sikha, and I believe that if she really wanted, she can truly convey admiration in a picture.</p>
+							<p>Architecture. The very word screams Dr. Seuss esque design and the angry failed attempts of measurements which, lacks precision either way. You see, the definition of Architecture varies and has held quite a debate amongst famous architects alike;</p> 
+							<p><i>"Architecture is the learned game correct and magnificent of forms assembled in the light." </p><p>- </i>Le Corbusier</p>
+							<p><i>"Architecture is inhabited sculpture." </p><p>- </i>Constantin Brancusi</p>
+							<p><i>"The art and science of designing buildings and (some) nonbuilding structures." </p><p>- </i>Unknown</p>
+							<p>However, for our dear old Sikha these definitions are somewhat indiffirent to hers. She would find some of the following, more suitable;<p>
+							<p><i>"Stressful."<p>
+							<p>-</i> Sikha Shrestha<p>
+							<p><i>"Stressing."<p>
+							<p>-</i> Sikha Shrestha<p>
+							<p><i>"I'm hungry."<p>
+							<p>-</i> Sikha Shrestha<p>
+							<p>I guess the point I'm trying to put across here is that, Sikha(who is studying to become an Architect) doesn't even want to be an Architect or at least not enjoying it as much as she thought. </p>
+							<p>Yet the best choice is to just float through it all, because your malleable fate is pretty much yours to manipulate.</p></p>Sikha is just waiting for her opportunity. If she truly believed. </p>
+						</div>
+						<div id="right_col">
+							<h3 style="text-align: right;"><i>Hers Truly</i></h3>
+							<div class="defaultdir"> 
+								<p>If you haven't read the column on the left "An Introduction", please do. If you've done so then hi. As you can probably guess the author of the overall site is not Sikha herself, but some other mysterious web developer (as he so vaguely titles himself) randomly writing on these empty minimalist pages.</p>
+								<p>For some, it may already be obvious who I am, but for others, they may be competely oblivious of my identity. For those people who don't know who I am, they have a chance to find my true identity by going to the "Secret" link on the navigation bar. </p>
+								<p>It won't be that easy thought. You get to pass some security first. Have fun with that.</p>
+								<p>Anywho. This is a page about Sikha Shrestha, a very okay girl, with a very not-okay attitude. Just kidding, she's not an okay girl neither. Some basic information about her is that she is Nepalese, short as a duck and very ill... like all the time. </p>
+								<p>Amongst her favourite things to do are; watch movies or TV series (does anyone even watch TV anymore), do weird dances and eat delicious (mostly Asian) cuisine. Such as these: </p>
+								<img style=" margin-left: 6%;border: 2px black solid; width: 90%;"src="images/asianfood.jpg"> </img>
+								<p>This image would likely make her salvate and slurp.</p>
+								<p>If you're a massive fan of anything Asian (preferably Korean), you will likely get along with Sikha, as she has some weird obsession, almost unhealthy (get it? cause food).</p>
+								<p>Anyways. I hope you enjoy these pages as much as I have enjoyed making them.</p><p> Oh this isn't goodbye at all. I'll be around, don't cry.</p>
+							</div>
+						</div>
+					</div>
+					<!---------- CONTACT ----------->
+					<div id="contact">
+						<h1 style=" font-size: 45px;text-align: center; border-bottom: 3px grey solid; font-family: quicksand;">~ CONTACT ~</h1>
+						<div id="contact_section">
+							<h3>The charming ways of contact: </h3>
+							<p><b>Telephone</b></p>
+							<p style="background-color:pink;">This information has been disclosed by the following owner and/or admin : <b>[Shrestha, Sikha]</b></p>
+							<p><b>Twitter</b></p>
+							<p>Twitter information unavailable. Sikha Shrestha does not have twitter. OR maybe she does but she doesn't use it anymore. </p>
+							<p><b>Facebook</b></p>
+							<p>Alright I'll give you this one. So that you came here for a reason at least! Go stalk her Facebook page here:</p>
+							<a target="_blank" href="facebook.com"><img style="width: 30%;"src="images/fb.png"> </img></a>
+							<p>Update: link doesn't really work. For some unknown reasons.</p>
+							<p><b>Email</b></p>
+							<a><p>ejpart3@hotmail.co.uk</p></a>
+							<p>Okay, this may not be her email per se but well... you can contact me instead. You know cause I'm relevant(?).</p>
+							<p><b>Address</b></p>
+							<p>You still don't get it do you?</p>
+							
+						</div>
+					</div>
+					
+					<!---------- MEDIA ----------->
+					<div id="media">
+						<h1 style=" font-size: 45px;text-align: center; border-bottom: 3px grey solid; font-family: quicksand;">~ MEDIA ~</h1>
+						<h3><i>Do you want to see some magnificent photography?</i></h3>
+						<p>You've come to the right place. This section connects you to another page that has professional photos by Sikha Shrestha herself. You may also find other media such as videos and audio. </p>
+						<p>All you have to do is click on the image below and it will lead you to the photography page.</p>
+						<a target="_blank" href="media.html"><img id="waves" src="images/waves.png" style="border: 6px black solid;"></a>
+						<p>Typically this link should be working. However if you're having trouble, try a few mirror links:</p>
+						<p>
+						<ul style="list-style-type: none;">
+							<li style="font-family: Playfair Display; font-size: 25px;"><a target="_blank" href="media.html">Link1</a></li>
+							<li style="font-family: Playfair Display; font-size: 25px;"><a  target="_blank"href="media.html">Link2</a></li>
+							<li style="font-family: Playfair Display; font-size: 25px;"><a  target="_blank"href="media.html">Link3</a></li>
+						</ul>
+						</p>
+						<p>Typically these should work, but if not,then you're on your own. It should work because they're all the same links. Sorry. Now ignore some of the following because it's mumbo jumbo.</p>
+						<p>Since this page is about media, here are a few disclaimers for the images I've been using:<br>
+						I do not own some of the images listed here, and do not claim any ownership of them. I am using them for commercial purposes only. Full resolutions list can be requested and downloaded. All images are included in the /images file from root directory of this site. I do however claim ownership of some images listed here and to the links leading from this page</p>
+						
+					</div>
+					<div id="secrets"> 
+						<h1 style="font-size: 45px;text-align: center; border-bottom: 3px grey solid; font-family: quicksand;">~ SECRET ~</h1>
+						<h3 style="text-align:center;"><i>Secrets are meant to be kept not shared</i></h3>
+						<p>So you've come to unlock the secret page.</p>
+						<p>It's pretty simple really. Just answer this cool riddle that I made. Nice and easy... right? If you still need some help why don't you peruse these pages longer, I promise it's easier that way. And (my english teacher told me never to start a sentence with 'and', but oh well. ***** you Mr. Dunn) now for the riddle!</p>
+						<div style="text-align: center; width: 50%; margin-left: 25%;">
+							<p><i><b>She is</b></p>
+							<p>Her golden skin inflicts blindness to those who stare. The rose petals follow suit around her footsteps. Sketical is he, enigmas are flung. Isn't she?</p>
+							<p>So simple her hair forms, so mellow her lips are filled with little touches of angels. Isn't she?</p>
+							<p>Life and love are the same, I never thought she'd love me the same. The meaning of her name makes me wonder. Isn't she?</i></p>
+							<p>- by Me</p>
+						</div>
+						<p>It's a little intimidating I know but this is all the clue you'll get, plus something(s) around this website. Look and read thoroughly and it will be clear. If you think you know the answer then fill in the follow box:</p>
+						<div id="secret_form">
+								<h3>What is the Key phrase?</h3><br>
+								<form name="myForm" onsubmit="return readAnswer()" action="#hidden" target="_top">
+									<input type="text" name="password" autocomplete="off" required></input>
+									<input type="submit" value="Enter"></input>
+								</form>
+							<h3 id="validation"style="display: none;">Incorrect!</h3>
+						</div>
+						<div id="hidden">
+							<h2><i>Welcome to the Hidden</i></h2>
+							<img style="border: 5px black solid; width: 20%;"src="images/balloons.JPG"></img>
+							<p>The guy in front (as some of you may already know) of this terrible picture is the famous author of this beautiful webpage. Hi, my name is Erlo.<br>
+							The person on the left is Sikha, the authors girlfriend. Yay.
+							</p>
+							<p>This site is basically a great example of using your girlfriend as material for practice! Ahem... the professional kind of practice.</p>
+							<p>So you must be wondering, what do I get for solving your puzzle?<br> Well this is pretty much it. Sorry pal. Maybe I'll edit this someday and find a way to make it better but for now, this is it.</p>
+							<p>I mean the riddle is cool enough as it is right? If you get it then it should be cool.</p>
+						</div>
+					</div>
+				</div>
+				
+				<div id="profile">
+					<img id="profile_pic"src="images/ss.JPG"></img>
+					<p style="margin: 2px; padding-left: 5px; margin-top: 0;"><b><i>Sikha Shrestha</i>, Architecture, 19</b></p>
+					<p style="margin: 2px; padding-left: 5px; margin: 0px;"><b><i>NEPAL</b>, Kathmandu</i> (Currently studying in the UK)</p>
+					<p style="margin: 2px; padding-left: 5px; margin-top: 14px;"><b><i>"Colourful and smart... when need be."</i></b></p>
+					<p style="margin: 2px; padding-left: 40px; margin: 0px;"><b><i> - Erlo Tayamen, Boyfriend</i></b></p>
+				</div>
+				
+				<div id="other"></div>
+			</div>
+			<!---------- FOOTER -----------
+			*Every site needs a footer! Not
+			the measurement... uhm.
+			---------->
+			<div id="footer"></div>
+		</div>
+		<!---------- END -----------
+		*And all stories have an end.
+		---------->
+
+	</body>
+</html>

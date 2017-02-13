@@ -1,0 +1,245 @@
+body, html{
+	padding: 0;
+	margin: 0;
+	font-family: caviarDreams;
+	font-size: 10px;
+}
+
+
+#wrapper{
+	
+	text-align: center;
+	position: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-image: url(images/mountpillars.jpg);
+	background-size: cover;	
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+
+
+#mid{
+	overflow: hidden;
+	margin: 0;
+	margin-top: 250px;
+	height: 200px;
+	width: 100%;
+	font-size: 20px;
+	color: white;
+	text-align: center;
+}
+
+#title{
+	animation: pop 2s both;
+}
+
+
+#line{
+	margin: 0 auto;
+	height: 50px;
+	width: 50px;
+	background-color: white;
+	animation: slide 3s ease-out forwards;
+}
+
+#playbtn{
+	opacity: 0;
+	margin: 0 auto;
+	width: 50px;
+	height: 50px;
+	animation: fadeIn 2s ease-in forwards;
+	animation-delay: 2s;
+}
+
+#arrow{
+	width: 60%;
+	margin: 10px;
+}
+
+/* ACTUAL CONTENT */
+
+.trueContent{
+	display: none;
+}
+
+.trueContenta{
+	margin: 4px;
+	display: none;
+}
+
+
+#header{
+	font-family: caviarDreams;
+	font-size: 10px;
+	text-align: center;
+	width: 100%;
+	height: 50px;
+	opacity: 0.8;
+	background-color: white;
+	animation: fadeInInitial 2s linear forwards;
+}
+
+#socials{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 170px;
+	height: 50px;
+	
+}
+
+#player{
+	float: left;
+	width: 150px;
+	margin: 0;
+}
+
+.social{
+	margin-top: 10px;
+	width: 25px;
+}
+
+#logo{
+	position: fixed;
+	width: 45px;
+	left: 5px;
+	top: 5px;
+}
+
+#images{
+	margin: 20px;
+	width: 660px;
+	height: 80%;
+	opacity: 0;
+	background-color: white;
+	animation: fadeIn 2s linear forwards;
+	animation-delay: 2s;
+}
+
+.image{
+	text-align: center;
+	max-width: 650px;
+	margin: 5px;
+}
+
+#img2{
+	display:none;
+}
+
+#selections{
+	color:white;
+	padding: 8px;
+	float: left;
+	width: 10%;
+	opacity: 0.8;
+	height: 83%;
+	background-color: black;
+	animation: slideLeft 2s ease-out forwards;
+}
+
+#info{
+	padding: 8px;
+	text-align: left;
+	font-family: courier new;
+	color: white;
+	float: right;
+	width: 15%;
+	height: 83%;
+	opacity: 0.8;
+	background-color: black;
+	animation: slideRight 2s ease-out forwards;
+}
+
+#footer{
+	padding: 0;
+	opacity: 0.8;
+	bottom: 0;
+	position: fixed;
+	width: 100%;
+	height: 30px;
+	background-color: black;
+	animation: slideBottom 3s ease-out forwards;
+}
+
+
+/*KEYFRAMES*/
+@keyframes slideLeft{
+	0%{margin-left: -600px}
+}
+
+@keyframes slideRight{
+	0%{margin-right: -600px}
+}
+
+@keyframes slideTop{
+	0%{margin-top: -600px}
+}
+
+@keyframes slideBottom{
+	0%{margin-bottom: -600px}
+}
+
+@keyframes slide{
+	75%{height: 5px; width:50px;}
+	100%{
+		left: 250px; 
+		height: 5px; 
+		width:920px;
+		}
+}
+
+@keyframes unSlide{
+	0%{
+	left: 250px; 
+	height: 5px; 
+	width:920px;}
+	90%{opacity:1;}
+	100%{height: 5px; width: 5px; opacity: 0;} 
+}
+
+@keyframes unPop{
+	0%{transform: scale(1.1);}
+	70%{transform: scale(1.2);}
+	80%{opacity:1;}
+	100%{transform: scale(0.5); opacity: 0;}
+}
+
+@keyframes fadeOut{
+	0%{opacity: 1}
+	100%{opacity: 0}
+}
+
+@keyframes fadeInInitial{
+	0%{opacity: 0}
+}
+
+@keyframes fadeIn{
+	0%{opacity: 0}
+	100%{opacity: 1}
+}
+@keyframes pop{
+	100%{transform: scale(1.1);}
+}
+
+@font-face{
+	font-family: lobster;
+	src: url(fonts/lobster/lobster_1.3.otf);
+}
+
+@font-face{
+	font-family: caviarDreams;
+	src: url(fonts/Caviar-Dreams/CaviarDreams.ttf);
+}
+@
+font-face{
+	font-family: raileway;
+	src: url(fonts/raleway/Raleway-Regular.ttf);
+}
+
+@font-face{
+	font-family: allura;
+	src: url(fonts/allura/allura-regular.otf);
+}
