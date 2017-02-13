@@ -92,7 +92,6 @@
 }
 
 #subtitle{
-	font-family: Playfair Display;
 	margin: auto;
 	display: block;
 	width: 100%;
@@ -188,7 +187,7 @@ li:hover{
 
 
 
-/****************** ABOUT ******************/
+/****************** MID SECTION ******************/
 #mid_section{
 	overflow: auto;
 	border: 5px black double;
@@ -199,6 +198,7 @@ li:hover{
 	opacity: 0.8;
 }
 
+/****************** ABOUT ******************/
 #about{
 	margin: 0;
 	padding: 10px;
@@ -257,25 +257,6 @@ li:hover{
 	transform: scale(1.05);
 }
 
-/****************** PROFILE ******************/
-#profile{
-	font-size: 13px;
-	border: 5px black double;
-	float: right;
-	margin: 10px;
-	display: inline-block;
-	width: 15%;
-	height: auto;
-	opacity: 0.8;
-	background-color:; 
-}
-
-#profile_pic{
-	width: 95%;
-	height: auto;
-	margin: 5px;
-}
-
 /****************** SECRET ******************/
 #secrets{
 	height: 97%;
@@ -304,8 +285,26 @@ input{
 	width: 50%;
 }
 
-/****************** KEYFRAMES ******************/
 
+
+/****************** PROFILE ******************/
+#profile{
+	font-size: 13px;
+	border: 5px black double;
+	float: right;
+	margin: 10px;
+	display: inline-block;
+	width: 15%;
+	height: auto;
+	opacity: 0.8;
+	background-color:; 
+}
+
+#profile_pic{
+	width: 95%;
+	height: auto;
+	margin: 5px;
+}
 
 
 
