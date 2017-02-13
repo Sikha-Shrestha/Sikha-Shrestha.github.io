@@ -7,21 +7,21 @@ with a clear focus on Sikha Shrestha (person of interest) as material.
 ## Files Included
 Files that are only in value of importance. Some other files are ignored for they are generic items.
 
-INDEX.HTML
+#### INDEX.HTML
 Main HTML page, includes the complete site, along with a link to a html that is unfinished (WIP). 
 Page is moderately complete but needs a few tweaks for completeness.
 
-STYLE.CSS
+#### STYLE.CSS
 Cascading Style Sheet for index.html. Includes various styles for different elements included in the 
 following html file (index.html only).
 
-README.md
+#### README.md
 This file
 
-DISCLAIMERS.HTML
+#### DISCLAIMERS.HTML
 Includes sample website disclaimers and copyright notice. 
 
-MEDIA.HTML
+#### MEDIA.HTML
 Under maintenance. Very alpha-beta stages of development, currently needs work.
 
 
@@ -30,10 +30,10 @@ For practice uses only. Personally, I needed a chance to use HTML, CSS, JAVASCRI
 correct guidelines to do so.
 
 ## Version History
-POST-HOSTING
-Date: 13.02.17 - v1.4(Current Version)
-Date: 11.02.17 - v1.3                
-PRE-HOSTING:
+##### POST-HOSTING
+Date: 13.02.17 - v1.4(Current Version)                           
+Date: 11.02.17 - v1.3
+##### PRE-HOSTING:
 Date: 11.02.17 - v1.2                         
 Date: 10.02.17 - v1.1(Beta)                   
 Date: 09.02.17 - SSW(Alpha)
