@@ -1,5 +1,5 @@
 /****************** BODY & HTML ******************/
- html, body{
+ html, body, .s-container{
 	 margin: 0;
 	 padding: 0;
 	 height: 100%;
@@ -8,96 +8,82 @@
 	 color: #000000;
 	 background-color: pink;
  }
-/****************** WRAPPER ******************/
- #wrapper{
+
+/****************** CONTAINER ******************/
+
+ .s-container{
 	 width: 100%;
 	 height: 100%;
 	 top: 0;
 	 left: 0;
 	 position: absolute;
-	 background-image: url(images/temple.jpg);
+	 background-image: url(../images/temple.jpg);
 	 background-repeat: no-repeat;
 	 background-size: cover;
  }
 
 /****************** HEADER ******************/
  
- #header{
-	 font-family: sofia;
-	 font-size: 10px;
-	 color: white;
+ .s-header{
 	 padding: 5px;
-	 margin: 0;
 	 width: 100px;
 	 height: 20px;
 	 position: fixed;
 	 top: 0;
 	 right: 0;
-
  }
  
- .marginless{
-	 margin: 0;
-	 display: inline;
+ .s-header h2{
+	font-family: sofia;
+	font-size: 10px;
+	color: white;
+	display: inline;
 }
 
-/****************** FACE ******************/
-#face_back{
+/****************** CENTER CARD ******************/
+.center-card--outter{
+	position: fixed;
+	padding: 10px;
+	top: 50%;
+	left: 50%;
+	/* bring your own prefixes */
+	transform: translate(-50%, -50%);
 	width: 415px;
 	height: 235px;
-	position: fixed;
-	padding: 20px;
-	margin-top: 150px;
-	margin-left: auto;
-	margin-right: auto;
-	display: block;
 	border: 4px double white;
-	left: 0%;
-	right: 0%;
 }
 
-#face{
+.center-card--inner{ 
+	height: 82%;
+	padding: 20px;
 	opacity: 0.8;
 	background-color: white;
-	padding: 20px;
-	margin-top: 160px;
-	margin-left: auto;
-	margin-right: auto;
-	position: fixed;
 	text-align: center;
-	left: 0%;
-	right: 0%;
-	display: block;
-	width: 400px;
-	height: 220px;
 }
-
  
-#title {
-	font-family: Playfair Display;
-	padding: 5px;
-	font-size: 25px;
+.center-card--title {
+	margin: auto;
 	color: black;
-	margin-bottom: 10px;
-	display: block;
-	width: 100%;
-	height: 99px;
+	width: 80%;
+	height: 60px;
 }
 
-#inner_title{
-	position: relative;
-	top: 30px;
+.center-card--title h1{
+	font-size: 46px;
+	margin: auto;
 	border-bottom: 3px white solid;
 	border-color: grey;
 }
 
-#subtitle{
+.center-card--subtitle{
 	margin: auto;
 	display: block;
 	width: 100%;
 	height: 99px;
 }
 
+
+/****************** ARROW ******************/
 #arrow{
 	margin-left: auto;
 	margin-right: auto;
@@ -276,7 +262,7 @@ li:hover{
 	text-align:center;
 	margin-top: 20px;
 	margin-bottom: auto;
-	width: 100%%;
+	width: 100%;
 	height: 200px;
 }
 
@@ -297,7 +283,6 @@ input{
 	width: 15%;
 	height: auto;
 	opacity: 0.8;
-	background-color:; 
 }
 
 #profile_pic{
@@ -325,22 +310,22 @@ input{
  html code and site*/
 @font-face{
 	font-family: alexBrush;
-	src: url(fonts/alex-brush/AlexBrush-Regular.ttf)
+	src: url(../fonts/alex-brush/AlexBrush-Regular.ttf)
 }
 
 @font-face{
 	font-family: caviarDreams;
-	src: url(fonts/Caviar-Dreams/CaviarDreams.ttf)
+	src: url(../fonts/Caviar-Dreams/CaviarDreams.ttf)
 }
 
 @font-face{
 	font-family: sofia;
-	src: url(fonts/sofia/Sofia-Regular.otf)
+	src: url(../fonts/sofia/Sofia-Regular.otf)
 }
 
 @font-face{
 	font-family: quicksand;
-	src: url(fonts/quicksand/Quicksand-BlodItalic.otf)
+	src: url(../fonts/quicksand/Quicksand-BlodItalic.otf)
 }
 
 ::-webkit-scrollbar {
